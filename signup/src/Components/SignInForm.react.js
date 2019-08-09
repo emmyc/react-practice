@@ -12,23 +12,22 @@ function SignInForm() {
 
   return (
     <div>
-      <h1>Sign In</h1>
       <ControlledInputComponent
         type="email"
         name="Email"
-        placeholder="emmy@gmail.com"
+        placeholder="Email"
         value={emailState}
         setValue={setEmailState}
       />
       <ControlledInputComponent
         type="password"
         name="Password"
-        placeholder="At least 6 digits"
+        placeholder="Password"
         value={passwordState}
         setValue={setPasswordState}
       />
 
-      <button onClick={submit}>Submit</button>
+      <button onClick={submit}>Sign In</button>
     </div>
   );
 }

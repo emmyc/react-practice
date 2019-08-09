@@ -5,8 +5,8 @@ type Props = {
   type: "text" | "password" | "email" | "checkbox",
   name: string,
   placeholder: string,
-  value: string,
-  setValue: (value: string) => void
+  value: string | boolean,
+  setValue: (value: string | boolean) => void
 };
 
 function ControlledInputComponent(props: Props) {
@@ -14,11 +14,23 @@ function ControlledInputComponent(props: Props) {
 
   // const onChange = function(e) {};
   const onChange = e => {
-    console.log(e);
+    console.log(e.target);
     console.log(e.target.value);
-    props.setValue(e.target.value);
+    if (props.type === "checkbox") {
+      props.setValue(!props.value);
+    } else {
+      props.setValue(e.target.value);
+    }
     // setValue goes to setNameState in Form, which changes nameState
   };
+
+  function getCheckbox() {
+    if (props.type === "checkbox") {
+      return <span>{props.value ? "Unhecked" : "Checked"}</span>;
+    } else {
+      return null;
+    }
+  }
 
   return (
     <div className="ControlledInputComponent_root">
@@ -30,6 +42,7 @@ function ControlledInputComponent(props: Props) {
         placeholder={props.placeholder}
         value={props.value}
       />
+      {getCheckbox()}
     </div>
   );
 }

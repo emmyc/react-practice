@@ -7,15 +7,25 @@ function SignUpForm() {
   const [nameState: ?string, setNameState] = React.useState("");
   const [passwordState: ?string, setPasswordState] = React.useState("");
   const [emailState: ?string, setEmailState] = React.useState("");
-  const [termsState: ?unchecked, setTermsState] = React.useState("unchecked");
+  const [termsState: boolean, setTermsState] = React.useState(true);
 
   const submit = () => {
     console.log(nameState, passwordState);
   };
 
+  // <Form fields=[{
+  //   type: ,
+  //   namee:
+  //   place,
+  //   value:
+  //   setvalue,
+  // },
+  // {
+
+  // }].map(elrm => <ControlledInputComponent type=/>)
+
   return (
     <div>
-      <h1>Sign Up</h1>
       <ControlledInputComponent
         type="text"
         name="Full Name"
@@ -26,7 +36,7 @@ function SignUpForm() {
       <ControlledInputComponent
         type="password"
         name="Password"
-        placeholder="At least 6 digits"
+        placeholder="At least 6 characters"
         value={passwordState}
         setValue={setPasswordState}
       />
