@@ -2,7 +2,7 @@
 import React from "react";
 import "./ControlledInputComponent.css";
 type Props = {
-  type: "text" | "password",
+  type: "text" | "password" | "email" | "checkbox",
   name: string,
   placeholder: string,
   value: string,
@@ -22,7 +22,7 @@ function ControlledInputComponent(props: Props) {
 
   return (
     <div className="ControlledInputComponent_root">
-      <label>{props.name}</label>
+      <label className="ControlledInputComponent_label">{props.name}</label>
       <input
         className="ControlledInputComponent_input"
         type={props.type}

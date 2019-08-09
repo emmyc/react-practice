@@ -1,0 +1,11 @@
+.SignUpForm_existingMember {
+  background: none;
+  border: none;
+  color: gray;
+  font-size: 8px;
+  box-shadow: none;
+}
+
+.SignUpForm_options {
+  margin: 20px;
+}

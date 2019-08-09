@@ -1,7 +1,21 @@
 .ControlledInputComponent_root {
-  margin: 5px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  text-align: left;
 }
 
 .ControlledInputComponent_input {
   padding: 5px;
+  background: transparent;
+  border: none;
+  margin: 5px;
+  border-bottom: 1px solid gray;
+  color: white;
+}
+
+.ControlledInputComponent_label {
+  font-size: 12px;
 }
