@@ -24,15 +24,15 @@ function FormSelector() {
     <div className="FormSelector_root">
       <div className="FormSelector_options">
         <button
-          className="FormSelector_optionButton"
           onClick={setSelectStateTo.bind(this, "signin")}
+          className={`button ${selectState === "signin" ? "active" : ""}`}
         >
           Sign In
         </button>
         <p>or</p>
         <button
-          className="FormSelector_optionButton"
           onClick={() => setSelectStateTo("signup")}
+          className={`button ${selectState === "signup" ? "active" : ""}`}
         >
           Sign Up
         </button>

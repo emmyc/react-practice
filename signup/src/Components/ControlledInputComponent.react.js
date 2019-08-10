@@ -26,7 +26,7 @@ function ControlledInputComponent(props: Props) {
 
   function getCheckbox() {
     if (props.type === "checkbox") {
-      return <span>{props.value ? "Unhecked" : "Checked"}</span>;
+      return <span>{props.value ? "Unhecked" : "Check/ed"}</span>;
     } else {
       return null;
     }

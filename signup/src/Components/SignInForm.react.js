@@ -1,7 +1,7 @@
 // @flow
 import React from "react";
 import ControlledInputComponent from "./ControlledInputComponent.react.js";
-
+import "./SignUpForm.css";
 function SignInForm() {
   const [nameState: ?string, setNameState] = React.useState("");
   const [passwordState: ?string, setPasswordState] = React.useState("");
@@ -27,7 +27,11 @@ function SignInForm() {
         setValue={setPasswordState}
       />
 
-      <button onClick={submit}>Sign In</button>
+      <div className="SignUpForm_options">
+        <button className="SignUpForm_submit" onClick={submit}>
+          Sign In
+        </button>
+      </div>
     </div>
   );
 }

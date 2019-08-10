@@ -13,19 +13,20 @@
 .FormSelector_options {
   display: flex;
   margin: 10px;
+  color: #a1a1a1;
 }
 
-.FormSelector_optionButton {
+.button {
   margin: 5px;
   background: transparent;
   padding: 5px;
   box-shadow: none;
-  border-radius: none;
+  border-radius: 0px;
   font-size: 20px;
-  color: #dddddd;
+  color: #a1a1a1;
 }
 
 .active {
   color: white;
-  text-decoration: underline #4bbcb2;
+  border-bottom: 2px solid #4bbcb2;
 }

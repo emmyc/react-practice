@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import StepSelector from "./Components/StepSelector.react.js";
+import StepComponent from "./Components/StepComponent.react.js";
 import LabelComponent from "./Components/LabelComponent.react.js";
 import FormSelector from "./Components/FormSelector.react.js";
 class App extends Component {
@@ -9,18 +11,8 @@ class App extends Component {
       <div className="App">
         <div className="signUpScreen">
           <div className="onboardContainer">
-            <LabelComponent label="Gloob" />
-
-            {["Emmy", "Rishabh"].map(elem => {
-              console.log(elem);
-              return <LabelComponent label={elem} />;
-            })}
-
-            {["Emmy", "Rishabh"].map(elem => (
-              <LabelComponent label={elem} />
-            ))}
+            <StepSelector />
           </div>
-
           <FormSelector />
         </div>
       </div>
