@@ -1,0 +1,29 @@
+.ResultComponent_root {
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+  color: #f9f2f4;
+  height: 200px;
+  text-align: right;
+  width: auto;
+  font-size: 30px;
+  justify-content: flex-end;
+  background-image: linear-gradient(#e33c68, #e84861);
+}
+
+.ResultComponent_input {
+  margin-right: 40px;
+}
+p {
+  margin-bottom: 0px;
+  margin-right: 0px;
+}
+
+h1 {
+  margin: 0px;
+}
+
+.ResultComponent_result {
+  margin-right: 40px;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,16 @@
+.KeypadComponent_root {
+  width: 100%;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(#e96578, #f48e77);
+}
+
+.KeypadComponent_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
