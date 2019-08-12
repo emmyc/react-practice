@@ -6,14 +6,20 @@ import step3 from "./step3.png";
 // import ControlledInputComponent from "./ControlledInputComponent.react.js";
 
 type Props = {
-  label: "1" | "2" | "3"
+  step: number
 };
 
+const dataset = [
+  { title: "Register for an account", image: step1 },
+  { title: "Get matched with another player", image: step2 },
+  { title: "Connect and meet new friends!", image: step3 }
+];
 function StepComponent(props: Props) {
   return (
     <div className="StepComponent_root">
-      <h1>Step {props.label}.</h1>
-      <img src={`step${props.label}`} />
+      <h1>Step {props.step}.</h1>
+      <h3> {dataset[props.step - 1].title}</h3>
+      <img src={dataset[props.step - 1].image} />
     </div>
   );
 }
