@@ -42,8 +42,6 @@ function InputComponent(props: Props) {
       />
 
       <button onClick={setValue}>Hello</button>
-
-      {poop()}
     </div>
   );
 }
